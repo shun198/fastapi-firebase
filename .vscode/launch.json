@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python デバッガー: FastAPI",
+            "name": "FastAPI Debugger: FastAPI",
             "type": "debugpy",
             "request": "launch",
             "module": "uvicorn",
@@ -16,6 +16,18 @@
             ],
             "cwd": "${workspaceFolder}",
             "jinja": true,
+            "justMyCode": false
+        },
+        {
+            "name": "Test Debugger: pytest",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "-v",
+                "tests"
+            ],
+            "cwd": "${workspaceFolder}",
             "justMyCode": false
         }
     ]
