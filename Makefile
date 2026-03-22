@@ -15,7 +15,7 @@ down:
 	docker compose down
 
 format:
-	$(RUN_UV) ruff check .
+	$(RUN_UV) ruff check --fix .
 	$(RUN_UV) ruff format .
 	
 test:
