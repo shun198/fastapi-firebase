@@ -63,12 +63,12 @@ These practices keep agent-assisted work aligned with FastAPI, uv, and this repo
     ├── config/                  # Cross-cutting concerns (env, logging, etc.)
     │
     ├── domain/                  # ★ Domain Layer - zero external dependencies
-    │   └── models/              # Entity / Aggregate Root
-    │
+    │   └── models/              # Entity / Aggregate Root        
     ├── usecase/                 # ★ Usecase Layer - orchestrates business flow
     │
     ├── infrastructure/          # ★ Infrastructure Layer
     │   ├── database.py          # DB config and session management
+    │   ├── orm/                 # SQLAlchemy models      
     │   └── repositories/        # Repository implementations
     │
     ├── presentation/            # ★ Presentation Layer

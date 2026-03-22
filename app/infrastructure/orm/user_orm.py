@@ -1,8 +1,9 @@
 from sqlalchemy import Integer, String
-from sqlalchemy.orm import Mapped, mapped_column, DeclarativeBase
+from sqlalchemy.orm import Mapped, mapped_column
+from app.infrastructure.database import Base
 
 
-class UserModel(Base):
+class UserOrm(Base):
     __tablename__ = "users"
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True, index=True)

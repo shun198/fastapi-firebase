@@ -6,7 +6,7 @@ from sqlalchemy import pool
 
 from alembic import context
 from app.infrastructure.database import Base
-from app.domain import models
+
 
 load_dotenv(".env")
 
@@ -26,8 +26,6 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 target_metadata = Base.metadata
-
-print(f"target_metadata: {target_metadata}")
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
