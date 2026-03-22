@@ -4,8 +4,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      # Bind mount + uv cache are often different filesystems; avoids hardlink warnings.
+      UV_LINK_MODE: copy
     volumes:
       - .:/code
+      # Keep venv inside the container (3.14) instead of the host's .venv (wrong/broken symlinks).
+      - app_venv:/code/.venv
     ports:
       - "8000:8000"
       # for debugging (VS Code launch.json)
@@ -30,3 +35,4 @@ services:
 
 volumes:
   db_data:
+  app_venv:
