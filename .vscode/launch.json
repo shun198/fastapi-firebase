@@ -15,6 +15,7 @@
                 "8080"
             ],
             "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.venv/bin/python",
             "jinja": true,
             "justMyCode": false
         },
@@ -24,10 +25,10 @@
             "request": "launch",
             "module": "pytest",
             "args": [
-                "-v",
                 "tests"
             ],
             "cwd": "${workspaceFolder}",
+            "python": "${workspaceFolder}/.venv/bin/python",
             "justMyCode": false
         }
     ]
