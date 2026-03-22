@@ -1,3 +1,3 @@
-- Never use raw numeric HTTP status codes (e.g., 200, 404).
-- Always use FastAPI status helpers (e.g. status.    assert response.status_code == status.HTTP_200_OK).
+- Never use raw numeric HTTP status codes (e.g., 200, 404) in application or test code when FastAPI provides a named constant.
+- Always use FastAPI `status` helpers (e.g. `from fastapi import status` and `assert response.status_code == status.HTTP_200_OK`).
 - Reject code that violates this rule and rewrite it.

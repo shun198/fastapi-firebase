@@ -1,0 +1,31 @@
+name: 機能提案・改善
+description: 新機能やドキュメント・DX の改善を提案する
+title: "[feat] "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        背景と受け入れ条件が分かると検討しやすいです。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 背景 / 課題
+      description: なぜ必要か、どんな痛みがあるか
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+      description: 実装案・APIの形・挙動の希望があれば
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 受け入れ条件（任意）
+      description: 完了とみなす条件
+    validations:
+      required: false
