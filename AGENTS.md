@@ -40,7 +40,7 @@ Without Docker, use the same checks as CI: `uv run pytest` (and ruff via `uv run
 ## 6. PR instructions
 
 - Branch name: `feat/<short-description>` (optionally include the GitHub issue id, e.g. `feat/123-short-description`).
-- Title format: `[fastapi-firebase] <Title>`
+- Title format: `<Title>`
 - Before committing: run `make format` and `make test` when using Docker; otherwise run the equivalent `uv run` commands above.
 
 These practices keep agent-assisted work aligned with FastAPI, uv, and this repo’s Docker setup.
