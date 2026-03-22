@@ -15,11 +15,9 @@ down:
 	docker compose down
 
 format:
-	$(RUN_UV) ruff format .
-
-lint:
 	$(RUN_UV) ruff check .
-
+	$(RUN_UV) ruff format .
+	
 test:
 	$(RUN_UV) pytest
 
