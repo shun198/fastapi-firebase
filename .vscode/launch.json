@@ -24,7 +24,6 @@
             "request": "launch",
             "module": "pytest",
             "args": [
-                "-v",
                 "tests"
             ],
             "cwd": "${workspaceFolder}",

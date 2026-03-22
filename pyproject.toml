@@ -9,6 +9,13 @@ dependencies = [
     "uvicorn[standard]>=0.32.0",
     "firebase-admin>=6.6.0",
     "pydantic-settings>=2.7.0",
+    "sqlalchemy>=2.0.48",
+    "sqlalchemy-utils>=0.42.1",
+    "alembic>=1.18.4",
+    "boto3>=1.42.73",
+    "pydantic[email]>=2.12.5",
+    "psycopg2>=2.9.11",
+    "python-dotenv>=1.2.2",
 ]
 
 [dependency-groups]
