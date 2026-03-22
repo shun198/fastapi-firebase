@@ -1,0 +1,9 @@
+FROM ghcr.io/astral-sh/uv:python3.14-bookworm
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+WORKDIR /code
+COPY pyproject.toml uv.lock ./
+RUN uv sync
+COPY app ./app
+EXPOSE 8000
+CMD ["uv", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
