@@ -1,0 +1,43 @@
+name: バグ報告
+description: 不具合や期待と異なる動作を報告する
+title: "[bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        再現手順と環境を書けるだけ具体的に書いてください。
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: 何が問題か、一行で
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 再現手順
+      description: ステップ、または再現用リクエスト例
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する動作
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の動作
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 環境
+      description: OS、Python / uv のバージョン、Docker の有無など
+    validations:
+      required: false
